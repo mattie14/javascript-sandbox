@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Guess the Number!</title>
+  </head>
+  <body>
+    <header>
+      <h1>Guess the Number!</h1>
+      <p class="between">
+        (Between 1 and
+        <select name="range" id="range" onchange="setMaxRange()">
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="50">50</option>
+          <option value="100">100</option></select
+        >)
+      </p>
+      <button class="btn again" hidden>New Game</button>
+      <div class="number">?</div>
+    </header>
+    <main>
+      <section class="left">
+        <input type="number" class="guess" />
+        <button class="btn check">Check!</button>
+      </section>
+      <section class="right">
+        <p class="message">Start guessing...</p>
+        <p class="label-score">✅ Score: <span class="score">5</span></p>
+        <p class="label-highscore">
+          🥇 High Score: <span class="highscore">0</span>
+        </p>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
